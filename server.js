@@ -10,12 +10,17 @@ app.get('/', function (req, res) {
 });
 
 app.get('/page2', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'firstPage.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
 app.get('/page3', function (req, res) {
- res.send("Hi welcome to the 3nd page");
+  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
+
+app.get('/page3', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
