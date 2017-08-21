@@ -9,11 +9,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/page2', function (req, res) {
+app.get('/page1', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
-app.get('/page3', function (req, res) {
+app.get('/page2', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
