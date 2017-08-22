@@ -77,7 +77,7 @@ app.get('/:articleName', function (req, res) {
 
 //articleName will define the articleone
 var articleName = req.params.articleName;
-  res.send(createTemplate(article[articleName]));
+  res.send(createTemplate(articles[articleName]));
 
     
 });
