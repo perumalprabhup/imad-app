@@ -18,7 +18,7 @@ function moveRight(){
 }
 ppp.onclick =function(){
     
-    var interaval=setInterval(moveRight,5);
+    var interaval=setInterval(moveRight,50);
     
-    ppp.style.marginLeft="100px";
+    ppp.style.marginLeft="50px";
 };
