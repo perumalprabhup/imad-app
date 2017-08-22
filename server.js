@@ -17,9 +17,11 @@ var articleOne={
 
 function createTemplate(data){
     
-    var title=data.title;
+    var title = data.title;
+    
     var heading = data.heading;
-    var paragraph=date.paragraph;
+    
+    var paragraph = date.paragraph;
 var htmlTemplate =`
 <html>
 <head>
