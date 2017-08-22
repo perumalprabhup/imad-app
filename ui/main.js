@@ -1,6 +1,6 @@
 console.log('Loaded!');
 //change the body conten
-
+/*
 var pp=document.getElementById("body-text");
 
 pp.innerHTML="<h1>HI how is this</h1>";
@@ -22,3 +22,20 @@ ppp.onclick =function(){
     
     //`ppp.style.marginLeft="50px";
 };
+
+
+*/
+
+var button =document.getElementById("counter");
+
+
+button.onClick = function(){
+    
+    counter=counter+1;
+    
+    var span = document.getElementById("count");
+    
+    span.innerHTML=counter.toString();
+    
+    
+}
