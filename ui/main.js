@@ -3,4 +3,4 @@ console.log('Loaded!');
 
 var pp=document.getElementById("body-text");
 
-pp.innerHtml="<h1>HI how is this</h1>";
+pp.innerHTML="<h1>HI how is this</h1>";
