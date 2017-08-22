@@ -51,7 +51,7 @@ ${paragraph}
 </body>
 </html>
 `;
-return htmlTemplate;
+return htmlTemplate();
 }
 
 
