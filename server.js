@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var article_One={
+var articleOne={
  title : "prabhu",
  heading :'This is My First Page',
  paragraph :`
@@ -47,7 +47,7 @@ var htmlTemplate =`
 </body>
 </html>
 `;
-return htmlTemplate;
+return htmlTemplate(data);
 }
 
 
@@ -56,7 +56,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/page1', function (req, res) {
-  res.send(createTemplate(article_one));
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/page2', function (req, res) {
