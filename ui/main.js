@@ -20,5 +20,5 @@ ppp.onclick =function(){
     
     var interaval=setInterval(moveRight,50);
     
-    ppp.style.marginLeft="50px";
+    //`ppp.style.marginLeft="50px";
 };
