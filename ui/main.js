@@ -11,14 +11,14 @@ var ppp=document.getElementById("img");
 var marginLeft=0;
 function moveRight(){
     
-    marginLeft=marginLeft+'100';
+    marginLeft = marginLeft + '5';
     img.style.marginLeft = marginLeft +'px';
     
     
 }
 ppp.onclick =function(){
     
-    var interaval=setInterval(moveRight,100);
+    var interaval=setInterval(moveRight,50);
     
     ppp.style.marginLeft="100px";
 };
