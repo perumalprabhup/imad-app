@@ -8,7 +8,7 @@ pp.innerHTML="<h1>HI how is this</h1>";
 
 
 var ppp=document.getElementById("img");
-var marginRight=0;
+var marginLeft=0;
 function moveRight(){
     
     marginLeft=marginLeft+'100';
