@@ -5,21 +5,21 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
- articleOne:{
+ 'article-one':{
  title : 'prabhu',
  heading :'This is My First Page',
  paragraph :`
 <p>This is the Content Page what to say is nothing now it will be Continued....</p> 
 <p>This is the advanced form of new datas and new Files  </p>
 `},
- articleTwo:{
+ 'article-two':{
  title : 'prabhu',
  heading :'This is My Second Page',
  paragraph :`
 <p>This is the Content Page what to say is nothing now it will be Continued....</p> 
 <p>This is the advanced form of new datas and new Files  </p>
 `},
- articleThree:{
+ 'article-three':{
  title : 'prabhu',
  heading :'This is My Third Page',
  paragraph :`
@@ -35,6 +35,7 @@ function createTemplate(data){
     var heading = data.heading;
     
     var paragraph = data.paragraph;
+    
 var htmlTemplate =`
 <html>
 <head>
@@ -72,10 +73,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/page1', function (req, res) {
-  res.send(createTemplate(article.articleOne));
+app.get('/:articleName', function (req, res) {
+
+//articleName will define the articleone
+var articleName = req.params.articleName;
+  res.send(createTemplate(article[articleOne]));
+
+    
 });
 
+/*
 app.get('/page2', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
   res.send(createTemplate(article.articleTwo));
@@ -87,7 +94,7 @@ app.get('/page3', function (req, res) {
   res.send(createTemplate(article.articleThree));
     
 });
-
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
