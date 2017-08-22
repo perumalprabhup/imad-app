@@ -71,11 +71,6 @@ ${paragraph}
 `;
 return htmlTemplate;
 }
-*/
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
 app.get('/:articleName', function (req, res) {
 
@@ -85,6 +80,13 @@ var articleName = req.params.articleName;
 
     
 });
+*/
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
 
 var counter =0;
 app.get ('/counter',function(req,res){
