@@ -6,12 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne={
- title : "prabhu",
+ title : 'prabhu',
  heading :'This is My First Page',
  paragraph :`
-This is the Content Page what to say is nothing now it will be Continued.... 
-This is the advanced form of new datas and new Files 
-`};
+<p>This is the Content Page what to say is nothing now it will be Continued....</p> 
+<p>This is the advanced form of new datas and new Files  </p>
+`
+    
+};
 
 function createTemplate(data){
     
@@ -37,7 +39,7 @@ var htmlTemplate =`
 </div>
 
 <div class="body">
-<p>${paragraph}</p>
+${paragraph}
 </div>
 <div class="footer pull-right">
 <h6>Copyrights@given to Prabhu for this year 2016-2020</h6>
