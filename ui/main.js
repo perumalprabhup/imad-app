@@ -27,6 +27,6 @@ button.onclick = function(){
 //make the req
 
 request.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
-request.close(null);
+request.send(null);
     
 };
