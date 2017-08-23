@@ -33,9 +33,7 @@ request.send(null);
     
 };
 
-//capture the Namee
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submitbtn = document.getElementById('submit_btn');
 
 submitbtn.onclick = function(){
@@ -73,6 +71,9 @@ ul.innerHTML = list;
         }
     }
     };
+    //capture the Namee
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
         
 //make the req
 
