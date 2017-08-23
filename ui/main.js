@@ -38,7 +38,7 @@ var nameInput = document.getElementById('name');
 var submitbtn = document.getElementById('submit_btn');
 var name = nameInput.value;
 
-submit.onclick = function(){
+submitbtn.onclick = function(){
     
     //capture the list of names 
     
