@@ -43,7 +43,7 @@ submit.onclick = function(){
     //capture the list of names 
     
     
-    var names =['name 1','name 2','name 2'];
+    var names =['name 1','name 2','name 3'];
     var list = '';
     
     for(i=0;i<names.length;i++){
