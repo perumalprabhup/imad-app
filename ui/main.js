@@ -1,10 +1,13 @@
 
-var button =document.getElementById('counter');
+var button = document.getElementById('counter');
 
-
-button.onclick = function(){
-var counter = 0;    
+var counter = 0 ;    
     
+button.onclick = function(){
+    
+    
+    
+
     //render the var in to the Correct span
     
     counter = counter + 1;
