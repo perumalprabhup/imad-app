@@ -12,7 +12,7 @@ button.onclick = function(){
         
     if(request.readyState  == XMLHttpRequest.DONE){
         
-        if(request.status===200){
+        if(request.status === 200){
             
             var counter =req.responseText;
                 
@@ -27,6 +27,6 @@ button.onclick = function(){
 //make the req
 
 request.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
-request.close('null');
+request.close(null);
     
 };
