@@ -42,9 +42,24 @@ submitbtn.onclick = function(){
     
     //capture the list of names 
     
+     
+    //create a req object;
+    var request=new XMLHttpRequest();
     
-    var names =['name 1','name 2','name 3'];
-    var list = '';
+    //capture the response and store it in a variable
+    
+    request.onreadystatechange =function(){
+        
+    if(request.readyState  == XMLHttpRequest.DONE){
+        
+        if(request.status === 200){
+            
+       //var names =['name 1','name 2','name 3'];
+       
+       var names = request .responseText;
+       names = JSON.parse(names);
+       
+       var list = '';
     
     for(i=0;i<names.length;i++){
         
@@ -52,6 +67,19 @@ submitbtn.onclick = function(){
     }
 var ul =document.getElementById('nameList');  
 ul.innerHTML = list;
+      
+      
+      
+        }
+    }
+    };
+        
+//make the req
+
+request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input_name?name=' + name,true);
+request.send(null);
+   
+   
 };
 
 
