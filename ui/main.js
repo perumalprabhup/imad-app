@@ -54,7 +54,7 @@ submitbtn.onclick = function(){
             
        //var names =['name 1','name 2','name 3'];
        
-       var names = request .responseText;
+       var names = request.responseText;
        names = JSON.parse(names);
        
        var list = '';
