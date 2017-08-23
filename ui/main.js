@@ -32,3 +32,26 @@ request.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
 request.send(null);
     
 };
+
+//capture the Namee
+var nameInput = document.getElementById('name');
+var submitbtn = document.getElementById('submit_btn');
+var name = nameInput.value;
+
+submit.onclick = function(){
+    
+    //capture the list of names 
+    
+    
+    var names =['name 1','name 2','name 2'];
+    var list = '';
+    
+    for(i=0;i<names.length;i++){
+        
+        list += '<li>'+names[i]+'</li>';
+    }
+var ul =document.getElementById('nameList');  
+ul.innerHTML = list;
+};
+
+
