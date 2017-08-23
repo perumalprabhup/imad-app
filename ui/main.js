@@ -35,8 +35,8 @@ request.send(null);
 
 //capture the Namee
 var nameInput = document.getElementById('name');
-var submitbtn = document.getElementById('submit_btn');
 var name = nameInput.value;
+var submitbtn = document.getElementById('submit_btn');
 
 submitbtn.onclick = function(){
     
@@ -48,9 +48,9 @@ submitbtn.onclick = function(){
     
     //capture the response and store it in a variable
     
-    request.onreadystatechange =function(){
+    request.onreadystatechange = function(){
         
-    if(request.readyState  == XMLHttpRequest.DONE){
+    if(request.readyState  === XMLHttpRequest.DONE){
         
         if(request.status === 200){
             
@@ -61,7 +61,7 @@ submitbtn.onclick = function(){
        
        var list = '';
     
-    for(var i=0;i<names.length;i++){
+    for(var i=0; i<names.length; i++){
         
         list += '<li>'+names[i]+'</li>';
     }
