@@ -65,7 +65,7 @@ submitbtn.onclick = function(){
     }
 
 
-var ul =document.getElementById('nameList');  
+var ul = document.getElementById('nameList');  
 ul.innerHTML = list;
       
       
@@ -79,7 +79,7 @@ var name = nameInput.value;
         
 //make the req
 
-request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input_name?name=' + name,true);
+request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input_name?name='+name,true);
 request.send(null);
    
    
