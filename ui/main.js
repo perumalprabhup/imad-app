@@ -4,23 +4,20 @@ var button = document.getElementById('counter');
 button.onclick = function(){
     
     //create a req object;
-    var req=new XMLHttpRequest();
+    var request=new XMLHttpRequest();
     
     //capture the response and store it in a variable
     
-    req.onreadystatechange =function(){
+    request.onreadystatechange =function(){
         
-    if(req.readyState == XMLHttpRequest.DONE){
+    if(request.readyState  == XMLHttpRequest.DONE){
         
-        if(req.status===200){
+        if(request.status===200){
             
-            var counter =req.responceText;
+            var counter =req.responseText;
                 
                 var span = document.getElementById('count');
     
-                span.innerHTML = counter.toString();
-    
-            
         }
     }
         
@@ -29,7 +26,7 @@ button.onclick = function(){
     
 //make the req
 
-req.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
-req.close('null');
+request.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
+request.close('null');
     
 };
