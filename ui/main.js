@@ -79,7 +79,7 @@ var name = nameInput.value;
         
 //make the req
 
-request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input_name?names='+name,true);
+request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input_name?name='+name,true);
 request.send(null);
    
    
