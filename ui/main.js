@@ -63,6 +63,10 @@ submitbtn.onclick = function(){
         
         list += '<li>'+names[i]+'</li>';
     }
+
+    //capture the Namee
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
 var ul =document.getElementById('nameList');  
 ul.innerHTML = list;
       
@@ -71,9 +75,7 @@ ul.innerHTML = list;
         }
     }
     };
-    //capture the Namee
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
         
 //make the req
 
