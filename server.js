@@ -82,12 +82,6 @@ var articleName = req.params.articleName;
 });
 */
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-
-
 var counter =0;
 app.get ('/counter',function(req,res){
     
@@ -95,6 +89,14 @@ app.get ('/counter',function(req,res){
     
     res.send(counter.toString());
 });
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
+
+
 /*
 app.get('/page2', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
