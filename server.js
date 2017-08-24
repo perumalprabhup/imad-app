@@ -127,7 +127,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names=[];
-app.get('/name_input',function (req,res){
+app.get('/name-input',function (req,res){
     
     var name=req.query.name;
     names.push(name);
