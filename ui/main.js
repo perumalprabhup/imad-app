@@ -36,7 +36,7 @@ ul.innerHTML = list;
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
 //make the req
-request.open('GET','http://perumalprabhu92.imad.hasura-app.io/input-name?name='+name,true);
+request.open('GET','http://perumalprabhu92.imad.hasura-app.io/name-input?name='+name,true);
 request.send(null);
 };
 
