@@ -84,6 +84,7 @@ var articleName = req.params.articleName;
 
 
 var names=[];
+
 app.get('/name-input',function (req,res){
     
     var name=req.query.name;
@@ -111,20 +112,6 @@ app.get ('/counter',function(req,res){
 
 
 
-/*
-app.get('/page2', function (req, res) {
- // res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-  res.send(createTemplate(article.articleTwo));
-    
-});
-
-app.get('/page3', function (req, res) {
- // res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-  res.send(createTemplate(article.articleThree));
-    
-});
-*/
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -138,6 +125,22 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
+
+
+/*
+app.get('/page2', function (req, res) {
+ // res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+  res.send(createTemplate(article.articleTwo));
+    
+});
+
+app.get('/page3', function (req, res) {
+ // res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+  res.send(createTemplate(article.articleThree));
+    
+});
+*/
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
