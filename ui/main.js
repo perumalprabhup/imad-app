@@ -52,10 +52,10 @@ submitbtn.onclick = function(){
         
         if(request.status === 200){
             
-       var names =['name 1','name 2','name 3'];
+       //var names =['name 1','name 2','name 3'];
        
-    //   var names = request.responseText;
-      // names = JSON.parse(names);
+      var names = request.responseText;
+      names = JSON.parse(names);
        
        var list = '';
     
