@@ -118,9 +118,9 @@ app.get('/ui/madi.png', function (req, res) {
 
 var names=[];
 
-app.get('/name-input/:name',function (req,res){
+app.get('/name-input',function (req,res){
     
-    var name=req.params.name;
+    var name=req.query.name;
     names.push(name);
     
     //json is used to convert the object to String
