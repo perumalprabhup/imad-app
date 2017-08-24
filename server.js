@@ -85,9 +85,9 @@ var articleName = req.params.articleName;
 
 var names=[];
 
-app.get('/name-input',function (req,res){
+app.get('/name-input/:name',function (req,res){
     
-    var name=req.query.name;
+    var name=req.params.name;
     names.push(name);
     
     //json is used to convert the object to String
