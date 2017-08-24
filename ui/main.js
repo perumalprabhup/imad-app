@@ -1,5 +1,4 @@
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 
 var submitbtn = document.getElementById('submit_btn');
 
@@ -7,19 +6,14 @@ submitbtn.onclick = function(){
     
     //capture the list of names 
     
-     var names =['name 1','name 2','name 3'];
-    //create a req object;
-    var request=new XMLHttpRequest();
-    
-    //capture the response and store it in a variable
-    
-    request.onreadystatechange = function(){
-        
-    if(request.readyState  === XMLHttpRequest.DONE){
-        
-        if(request.status === 200){
-            
-       var names =['name 1','name 2','name 3'];
+   
+    //capture the Namee
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+
+
+
+var names =['name 1','name 2','name 3'];
        
       //var names = request.responseText;
       //names = JSON.parse(names);
@@ -34,12 +28,6 @@ submitbtn.onclick = function(){
     var ul = document.getElementById('nameList');  
   
     ul.innerHTML = list;
-      
-        }
-    }
-    };
-    //capture the Namee
-
         
 //make the req
 
