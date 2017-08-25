@@ -2,11 +2,10 @@
 
 var submitbtn = document.getElementById('submit_btn');
 
-submitbtn.onclick = function(){
+ submitbtn.onclick = function(){
     
     //capture the list of names 
-    
-     
+
     //create a req object;
     var request=new XMLHttpRequest();
     
@@ -25,11 +24,11 @@ submitbtn.onclick = function(){
        var list = '';
     for(var i=0; i<names.length; i++){
         
-        list += '<li>'+names[i]+'</li>';
+        list += '<li>'+names[i]+'</li>'+ '<br/><li class="comments">'+'<input type="form" name ="comment" max=5>'+'</li>' ;
     }
 var ul = document.getElementById('nameList');  
 ul.innerHTML = list;
-      }
+    }
     }
     };
     //capture the Namee
@@ -39,9 +38,6 @@ var name = nameInput.value;
 request.open('GET','http://perumalprabhu92.imad.hasura-app.io/name-input?name='+name,true);
 request.send(null);
 };
-
-
-
 
 var button = document.getElementById('counter');
 
