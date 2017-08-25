@@ -24,7 +24,7 @@ var submitbtn = document.getElementById('submit_btn');
        var list = '';
     for(var i=0; i<names.length; i++){
         
-        list += '<li>'+names[i]+'</li>'+ '<br/><li class="comments">'+'<input type="file" name="comment" max=5>'+'<input type="submit" value="submit"></li>' ;
+        list += '<li>'+names[i]+'</li>'+ '<br/><li class="comments">'+'<input type="file" name="comment" max=5>'+'<textarea rowsz="4" cols="50"></textarea></li>' ;
     }
 var ul = document.getElementById('nameList');  
 ul.innerHTML = list;
