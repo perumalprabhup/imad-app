@@ -89,8 +89,8 @@ return htmlTemplate;
 app.get('/article/:articleName', function (req, res) {
 
 //articleName will define the articleone
-var articleName = req.params.articleName;
- var articleData = 
+//var articleName = req.params.articleName;
+// var articleData = 
  pool.query("SELECT * FROM article where title="+req.params.articlename,function(err,result){
      
      if(err){
