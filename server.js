@@ -105,9 +105,11 @@ app.get('/test',function(req,res){
     pool.query('SELECT * FROM test',function(err,result){
         
         if(err){
-            err.status(500).send(err,toString("prabhu Error"));
+            err.status(500).send(err,toString());
         }
-        
+        else{
+            res.send(JSON.stringify(result));
+        }
     });
     
     
