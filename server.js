@@ -81,16 +81,37 @@ ${paragraph}
 `;
 return htmlTemplate;
 }
+*/
 
-app.get('/:articleName', function (req, res) {
+
+
+
+app.get('/article/:articleName', function (req, res) {
 
 //articleName will define the articleone
 var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-
+ var articleData = 
+ pool.query("SELECT * FROM article where title="+req.params.articlename,function(err,result){
+     
+     if(err){
+         res.status(500).send(err.toString());
+         
+     }
+     else{
+         if(result.rows.length === 0){
+             res.status(400).send("article not found");
+         }
+         else{
+             var articlData = result.rows[0];
+              res.send(createTemplate(articles[articleData]));
+             
+         }
+     }
+     
+ });
     
 });
-*/
+
 
 
 
