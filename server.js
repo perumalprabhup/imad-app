@@ -90,7 +90,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool = new Pool(config);
+//var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     
     
@@ -110,7 +110,7 @@ app.get('/test-db',function(req,res){
 
 
 
-
+var pool = new Pool(config);
 app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
@@ -128,15 +128,10 @@ app.get('/articles/:articleName', function (req, res) {
          else{
              var articleData = result.rows[0];
               res.send(createTemplate(articleData));
-             
          }
      }
-     
  });
-    
 });
-
-
 var counter =0;
 app.get ('/counter',function(req,res){
     
