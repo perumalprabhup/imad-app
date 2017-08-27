@@ -26,6 +26,11 @@ var submitbtn = document.getElementById('submit_btn');
         
         list += '<li>'+names[i]+'</li>'+ '<br/><li class="comments">'+'<textarea rowsz="4" cols="50"></textarea><input type="submit" value="submit"></li>' ;
     }
+
+
+
+
+
 var ul = document.getElementById('nameList');  
 ul.innerHTML = list;
     }
