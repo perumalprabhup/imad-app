@@ -110,14 +110,14 @@ app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
 
- pool.query("SELECT * FROM article where title = '" + req.params.articleName+"'",function(err,result){
+ pool.query("SELECT * FROM article where title = '" + req.params.articleName +"'",function(err,result){
      
      if(err){
          res.status(500).send(err.toString());
      }
      else{
          if(result.rows.length === 0){
-             res.status(400).send("article not found");
+             res.status(400).send("Article not found");
          }
          else{
              
