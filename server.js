@@ -110,7 +110,7 @@ app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
 
- pool.query("SELECT * FROM article where heading  = '" + req.params.articleName+"'",function(err,result){
+ pool.query("SELECT * FROM article where heading='Article_One' ",function(err,result){
      
      if(err){
          res.status(500).send(err.toString());
@@ -121,10 +121,11 @@ app.get('/articles/:articleName', function (req, res) {
          }
          else{
              
-                var articleData = result.rows[0];
+             /*   var articleData = result.rows[0];
              
               res.send(createTemplate(articleData));
-         
+         */
+             res.send(JSON.stringify(result.rows));
              
          }
      }
