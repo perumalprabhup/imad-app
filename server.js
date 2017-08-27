@@ -122,13 +122,14 @@ app.get('/articles', function (req, res) {
          res.status(500).send(err.toString());
      }
      else{
+     /*   
          if(result.rows.length === 0){
              res.status(400).send("article not found");
          }
-         else{
+         else{*/
              var articleData = result.rows[0];
               res.send(createTemplate(articleData));
-         }
+         
      }
  });
 });
