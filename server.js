@@ -86,12 +86,12 @@ return htmlTemplate;
 
 
 
-app.get('/article/:articleName', function (req, res) {
+app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
 //var articleName = req.params.articleName;
 // var articleData = 
- pool.query('SELECT * FROM article where title =' + req.params.articleName  ,function(err,result){
+ pool.query("SELECT * FROM article where title = '" + req.params.articleName+"'"  ,function(err,result){
      
      if(err){
          res.status(500).send(err.toString());
@@ -102,6 +102,7 @@ app.get('/article/:articleName', function (req, res) {
          }
          else{
              var articleData = result.rows[0];
+             
               res.send(createTemplate(articleData));
              
          }
