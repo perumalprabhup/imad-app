@@ -142,7 +142,7 @@ app.get('/articles/:articleName', function (req, res) {
                 
     
                 var artData = result.rows[0];
-                res.send(createtemplate(artData));
+                res.send(createTemplate(artData));
     
     
     
