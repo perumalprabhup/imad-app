@@ -70,7 +70,7 @@ var htmlTemplate =`
 </div>
 
 <div class="body">
-${date}
+${date.toDateString()}
 ${content}
 </div>
 <div class="footer pull-right">
