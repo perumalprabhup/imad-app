@@ -48,7 +48,7 @@ function createTemplate(data){
     
     var heading = data.heading;
     
-    var paragraph = data.paragraph;
+    var date = data.date;
     
 var htmlTemplate =`
 <html>
@@ -69,7 +69,7 @@ var htmlTemplate =`
 </div>
 
 <div class="body">
-${paragraph}
+${date}
 </div>
 <div class="footer pull-right">
 <h6>Copyrights@given to Prabhu for this year 2016-2020</h6>
