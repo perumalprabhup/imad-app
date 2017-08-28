@@ -127,7 +127,7 @@ app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
 
- pool.query("SELECT * FROM article where title = '" + req.params.articleName + "'" ,function(err,result){
+ pool.query("SELECT * FROM article where title = $1 " ,[ req.params.articleName],function(err,result){
      
      if(err){
          res.status(500).send(err.toString());
