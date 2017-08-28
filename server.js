@@ -49,6 +49,7 @@ function createTemplate(data){
     var heading = data.heading;
     
     var date = data.date;
+    var content = data.content;
     
 var htmlTemplate =`
 <html>
@@ -70,6 +71,7 @@ var htmlTemplate =`
 
 <div class="body">
 ${date}
+${content}
 </div>
 <div class="footer pull-right">
 <h6>Copyrights@given to Prabhu for this year 2016-2020</h6>
