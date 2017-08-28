@@ -40,7 +40,7 @@ var articles={
 <p>This is the advanced form of new datas and new Files  </p>
 `}
 };
-
+*/
 
 function createTemplate(data){
     
@@ -81,7 +81,7 @@ ${paragraph}
 `;
 return htmlTemplate;
 }
-*/
+
 
 
 
