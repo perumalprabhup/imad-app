@@ -138,9 +138,16 @@ app.get('/articles/:articleName', function (req, res) {
              
                 // var articleData = result.rows[0];
              
-                // res.send(createTemplate(articleData));
+                //  res.send(createTemplate(articleData));
                 
-                 res.send(JSON.stringify(result.rows));
+    
+                var artData = result.rows[0];
+                res.send(createtemplate(articles[artData]));
+    
+    
+    
+    
+               //  res.send(JSON.stringify(result.rows));
          
              
          }
