@@ -221,6 +221,17 @@ else{
 });
 
 
+app.get ('/logout',function(req,res){
+if(req.session && req.session.auth && req.session.auth.userId){
+
+    delete req.session.auth;
+    res.send("Logged Out Susscessfully");
+}
+    
+    
+});
+
+
 app.get ('/hash/:input',function(req,res){
     
     var hashedString = hash(req.params.input,"This-is-the-String");
