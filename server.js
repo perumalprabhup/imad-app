@@ -203,6 +203,7 @@ app.get ('/hash/:input',function(req,res){
     
     res.send(hashedString);
 });
+
 app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
