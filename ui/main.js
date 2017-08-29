@@ -1,5 +1,5 @@
 
-
+/*
 var submitbtn = document.getElementById('submit_btn');
 
  submitbtn.onclick = function(){
@@ -71,6 +71,8 @@ button.onclick = function(){
         
     };
     
+    
+    
 //make the req
 
 request.open('GET','http://perumalprabhu92.imad.hasura-app.io/counter',true);
@@ -78,5 +80,44 @@ request.send(null);
     
 };
 
+*/
 
 
+var submitbtn = document.getElementById('submit');
+
+ submitbtn.onclick = function(){
+    
+    //capture the list of names 
+
+    //create a req object;
+    var request=new XMLHttpRequest();
+    
+    //capture the response and store it in a variable
+    
+    request.onreadystatechange = function(){
+        
+    if(request.readyState  === XMLHttpRequest.DONE){
+        
+        if(request.status === 200){
+    alert ("User Logged in Successfully");
+    }
+    else if(request.status === 403){
+     alert("username/password is incorrect");   
+    }
+    else if(request.status === 500){
+        alert("Server Failure");
+    }
+    }
+    };
+    //capture the Namee
+var nameInput = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+console.log(username);
+console.log(password);
+
+//make the req
+request.open('POST','http://perumalprabhu92.imad.hasura-app.io/login',true);
+request.setRequestHeader('Content-Type','application/json');
+request.send(JSON.stringify({username:username,password:password}));
+
+};
