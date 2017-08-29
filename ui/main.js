@@ -101,7 +101,7 @@ var submit = document.getElementById('submit');
         if(request.status === 200){
     alert ("User Logged in Successfully");
     }
-    else if(request.status === 404){
+    else if(request.status === 403){
      alert("username/password is incorrect");   
     }
     else if(request.status === 500){
