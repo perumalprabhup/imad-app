@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var  crypto = require('crypto');
 
 var config={
     user:'perumalprabhu92',
@@ -119,10 +120,20 @@ app.get ('/counter',function(req,res){
 });
 
 
-
-
-
-
+function hash(input,salt){
+   // crypto.pbkdf2(password, salt,10000,512, );
+    crypto.pbkdf2('input', 'salt', 100000, 512, 'sha512');
+    return hashed.toString(hex);
+ 
+    
+    
+}
+app.get ('/hash/:input',function(req,res){
+    
+    var hashAsString = hash(req.params.input,"");
+    
+    res.send(hashAsString);
+});
 app.get('/articles/:articleName', function (req, res) {
 
 //articleName will define the articleone
