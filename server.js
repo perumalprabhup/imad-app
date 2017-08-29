@@ -124,8 +124,8 @@ function hash(input,salt){
    // crypto.pbkdf2(password, salt,10000,512, );
     
     
-    var key = crypto.pbkdf2Sync('input', 'salt', 1000, 512, 'sha512');
-    return key.toString('hex');  // '3745e48...aa39b34'
+    var key = crypto.pbkdf2Sync('input', 'salt', 10000, 512, 'sha512');
+    return ['pbkdf2','10000',salt,key.toString('hex')].join('$');  // '3745e48...aa39b34'
  
     
     
