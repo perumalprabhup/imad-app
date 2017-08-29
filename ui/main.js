@@ -83,9 +83,9 @@ request.send(null);
 */
 
 
-var submitbtn = document.getElementById('submit');
+var submit = document.getElementById('submit');
 
- submitbtn.onclick = function(){
+ submit.onclick = function(){
     
     //capture the list of names 
 
