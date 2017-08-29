@@ -209,7 +209,7 @@ pool.query('SELECT * FROM "user" WHERE username = $1 ',[username],function(err,r
 
 
 
-app.get ('check-login',function(req,res){
+app.get ('/check-login',function(req,res){
 if(req.session && req.session.auth && req.session.auth.userId){
     res.send("You are logged In with ID :"+req.session.auth.userId.toString());
 }
