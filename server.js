@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var  crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var config={
     user:'perumalprabhu92',
@@ -17,6 +18,11 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret : "someRandomSecretValue",
+    cookie : {maxAge:1200*60*60*24*30}
+    
+}));
 
 /*
 
@@ -165,7 +171,6 @@ var password = req.body.password;
 
 var salt = crypto.randomBytes(128).toString('hex');
 var dbString =hash(password,salt);
-//pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
 
 pool.query('SELECT * FROM "user" WHERE username = $1 ',[username],function(err,result){
     
@@ -182,6 +187,11 @@ pool.query('SELECT * FROM "user" WHERE username = $1 ',[username],function(err,r
              var salt = dbString.split("$")[2];
              var hashedPassword = hash(password,salt);
              if(hashedPassword === dbString){
+                 
+                 //set the Session
+                 req.session.auth = {userId:result.rows[0].id};
+                 
+                 
                   res.send("credentials Ok ");
              }else{
                  res.send(403).send(" NO User at the Name found"); 
@@ -195,6 +205,20 @@ pool.query('SELECT * FROM "user" WHERE username = $1 ',[username],function(err,r
     
 });
 
+
+
+
+
+app.get ('check-login',function(req,res){
+if(req.session && req.session.auth && req.session.auth.userId){
+    res.send("You are logged In with ID :"+req.session.auth.userId.toString());
+}
+else{
+    res.send("User not Logged In");
+}
+    
+    
+});
 
 
 app.get ('/hash/:input',function(req,res){
