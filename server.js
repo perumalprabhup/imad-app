@@ -123,9 +123,11 @@ app.get ('/counter',function(req,res){
 function hash(input,salt){
    // crypto.pbkdf2(password, salt,10000,512, );
     
-    var hashed = crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
     
-    return hashed.toString('hex');
+ var  key = crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
+
+
+return key.toString('hex');  // '3745e48...aa39b34'
  
     
     
