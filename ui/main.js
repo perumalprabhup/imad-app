@@ -110,7 +110,7 @@ var submit = document.getElementById('submit');
     }
     };
     //capture the Namee
-var nameInput = document.getElementById('username').value;
+var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
 
 console.log(username);
