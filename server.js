@@ -123,7 +123,7 @@ app.get ('/counter',function(req,res){
 function hash(input,salt){
    // crypto.pbkdf2(password, salt,10000,512, );
     
-    var hashed = crypto.pbkdf2('input', 'salt', 100000, 512, 'sha512');
+    var hashed = crypto.pbkdf2Sync('input', 'salt', 100000, 512, 'sha512');
     
     return hashed.toString(hex);
  
@@ -132,9 +132,9 @@ function hash(input,salt){
 }
 app.get ('/hash/:input',function(req,res){
     
-    var hashAsString = hash(req.params.input,"");
+    var hashedString = hash(req.params.input,"This-is-the-String");
     
-    res.send(hashAsString);
+    res.send(hashedString);
 });
 app.get('/articles/:articleName', function (req, res) {
 
