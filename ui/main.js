@@ -104,7 +104,7 @@ var submit = document.getElementById('submit');
     else if(request.status === 403){
      alert("username/password is incorrect");   
     }
-    else if(request.status === 500){
+    else if(request.status === 502){
         alert("Server Failure");
     }
     }
@@ -112,7 +112,9 @@ var submit = document.getElementById('submit');
     //capture the Namee
 var nameInput = document.getElementById('username').value;
 var password = document.getElementById('password').value;
+
 console.log(username);
+
 console.log(password);
 
 //make the req
