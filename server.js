@@ -81,6 +81,7 @@ var htmlTemplate =`
 <div class="body">
 ${date.toDateString()}
 ${content}
+<input type="text" name="prabhu"/>Hi
 </div>
 <div class="footer pull-right">
 <h6>Copyrights@given to Prabhu for this year 2016-2020</h6>
